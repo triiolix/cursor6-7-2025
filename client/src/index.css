@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Quill editor styles */
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  background: white;
+  padding: 8px 16px !important;
+}
+
+.ql-container {
+  border: none !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ql-editor {
+  padding: 24px 48px !important;
+  min-height: calc(100vh - 200px);
+}
+
+.ql-editor::before {
+  font-style: normal;
+  color: #9ca3af;
+}
+
+/* Custom toolbar styles */
+.ql-toolbar .ql-picker-label {
+  color: #374151;
+}
+
+.ql-toolbar .ql-stroke {
+  stroke: #374151;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #374151;
+}
+
+.ql-toolbar button:hover {
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+.ql-toolbar button.ql-active {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+
+/* Document list styles */
+.document-card {
+  transition: all 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading animation */
+.spinner {
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #1a73e8;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
