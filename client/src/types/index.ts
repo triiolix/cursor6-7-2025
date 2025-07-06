@@ -30,6 +30,8 @@ export interface CursorPosition {
 
 export interface User {
   id: string;
+  userName?: string;
+  color?: string;
   position?: {
     index: number;
     length: number;
